@@ -16,3 +16,8 @@ var initialPhotos = [
     url: 'http://static.comicvine.com/uploads/original/11119/111193741/4607146-1325517488-Sokka.jpg'
   }
 ];
+
+initialPhotos = initialPhotos.map((photo) => {
+  photo.rating = 0;
+  return photo;
+});
