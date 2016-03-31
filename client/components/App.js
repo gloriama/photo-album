@@ -7,11 +7,15 @@ class App extends React.Component {
     }
   }
 
+  setCurrentPhoto(photo) {
+    this.setState({ currentPhoto: photo });
+  }
+
   render() {
     return (
       <div>
         <p>Photo Album</p>
-        <Selector photos={this.state.photos} />
+        <Selector photos={this.state.photos} setCurrentPhoto={this.setCurrentPhoto.bind(this)} />
         <ViewPort photo={this.state.currentPhoto} />
       </div>
     );

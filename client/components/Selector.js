@@ -2,7 +2,13 @@ window.Selector = (props) => (
   <table>
     <thead>{props.title}</thead>
     <tbody>
-      {props.photos.map((photo) => <tr key={photo.title}><td>{photo.title}</td></tr>)}
+      {props.photos.map((photo) => (
+        <SelectorItem
+          key={photo.title}
+          photo={photo}
+          onClick={() => props.setCurrentPhoto(photo)}
+        />
+      ))}
     </tbody>
   </table>
 );
