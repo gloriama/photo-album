@@ -2,7 +2,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      photos: initialPhotos // from data/initialPhotos.js
+      photos: initialPhotos, // from data/initialPhotos.js
+      currentPhoto: initialPhotos[0]
     }
   }
 
@@ -10,7 +11,8 @@ class App extends React.Component {
     return (
       <div>
         <p>Photo Album</p>
-        <Gallery title="Avatar: The Last Airbender" photos={this.state.photos} />
+        <Selector photos={this.state.photos} />
+        <ViewPort photo={this.state.currentPhoto} />
       </div>
     );
   }
