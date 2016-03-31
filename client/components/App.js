@@ -11,12 +11,17 @@ class App extends React.Component {
     this.setState({ currentPhoto: photo });
   }
 
+  updateRating(newRating) {
+    this.state.currentPhoto.rating = newRating;
+    this.setState({ currentPhoto: this.state.currentPhoto });
+  }
+
   render() {
     return (
       <div>
         <p>Photo Album</p>
         <Selector photos={this.state.photos} setCurrentPhoto={this.setCurrentPhoto.bind(this)} />
-        <ViewPort photo={this.state.currentPhoto} />
+        <ViewPort photo={this.state.currentPhoto} updateRating={this.updateRating.bind(this)} />
       </div>
     );
   }
