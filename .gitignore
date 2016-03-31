@@ -1,0 +1,7 @@
+## Mac OSX ##
+.DS_Store
+
+## Bower ##
+client/lib/react
+client/lib/jquery
+client/lib/lodash
