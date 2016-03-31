@@ -1,6 +1,7 @@
 var App = () => (
   <div>
-    <p>Hello, world!</p>
+    <p>Photo Album</p>
+    <Gallery />
   </div>
 );
 
