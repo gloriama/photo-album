@@ -32,3 +32,36 @@ Babel will make the script type ```text/babel``` available to all subsequent scr
 The App.js file will be the entry point for your React app.
 
 3. Create a ```components``` folder and a file ```App.js``` inside it. Inside here, you will define a class called ```App``` that extends ```React.component```. This will simply return some JSX. Then use ReactDOM to actually render that component inside a specific DOM element, i.e. ```document.getElementById('#app')```.
+
+## Components
+
+There are three types of React components you will see.
+
+### Functional components with no props
+
+```
+window.Gallery = () => (
+  <p>This is a gallery with no custom title</p>
+);
+```
+
+### Functional components with props
+
+```
+window.Gallery = (props) => (
+  <p>This is a gallery with title { props.title }</p>
+);
+```
+
+### Class components
+
+```
+class Gallery extends React.Component {
+  render() {
+    return <p>This is a gallery with title {this.props.title}</p>;
+  }
+}
+window.Gallery = Gallery;
+```
+
+Start from the first, and move up only as necessary. Class components are needed only if you want to maintain *state* on that component.
