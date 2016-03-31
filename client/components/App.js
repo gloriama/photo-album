@@ -7,6 +7,11 @@ class App extends React.Component {
     }
   }
 
+  addPhoto(title, url) {
+    this.state.photos.push({ title, url, rating: 0 });
+    this.setState({ photos: this.state.photos });
+  }
+
   setCurrentPhoto(photo) {
     this.setState({ currentPhoto: photo });
   }
@@ -20,6 +25,7 @@ class App extends React.Component {
     return (
       <div>
         <p>Photo Album</p>
+        <Adder addPhoto={this.addPhoto.bind(this)} />
         <Selector photos={this.state.photos} setCurrentPhoto={this.setCurrentPhoto.bind(this)} />
         <ViewPort photo={this.state.currentPhoto} updateRating={this.updateRating.bind(this)} />
       </div>
