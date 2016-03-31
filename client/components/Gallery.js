@@ -1,11 +1,10 @@
 window.Gallery = (props) => (
-  <div>
-    <p>{props.title}</p>
-    {props.photos.map((photo) => (
-      <div key={photo.title}>
-        <p>{photo.title}</p>
-        <img src={photo.url} width="400" />
-      </div>
-    ))}
-  </div>
+  <table>
+    <thead>
+      {props.title}
+    </thead>
+    <tbody>
+      {props.photos.map((photo) => <GalleryItem key={photo.title} photo={photo} />)}
+    </tbody>
+  </table>
 );
