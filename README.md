@@ -21,9 +21,9 @@ Conceptually, these are the steps needed to create a React app.
 1. You must serve the files from a server, rather than rendering them directly from the file system. This is so that Babel can transpile the ES6 syntax. ES6, and therefore Babel, is not technically needed for React, but it is so commonly used with React that we will include it here.
 
 2. Create an index.html file with:
-* ```<div id="app"></div>``` inside the body tag
-* Babel as the first script
-* ```<script type="text/babel" src="components/App.js"></script>```
+  * ```<div id="app"></div>``` inside the body tag
+  * Babel as the first script
+  * ```<script type="text/babel" src="components/App.js"></script>```
 
 The ```div``` with id "app" will be where the entire React app gets rendered, using ReactDOM (see next step).
 
